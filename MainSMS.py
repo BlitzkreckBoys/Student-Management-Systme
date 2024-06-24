@@ -14,16 +14,11 @@ class StudentManagementSystem:
                 print("Invalid input. Name should only contain alphabetic characters.")
                 continue
             DEP = input("Enter student's department: ")
-
-            while True:
-                try:
-                    session = int(input("Enter student's session: "))
-                    sem = int(input("Enter student's semester: "))
-                    DoB = input("Enter student's date of birth (YYYY-MM-DD): ")
-                    Roll_num = int(input("Enter student's roll number: "))
-                    break
-                except ValueError:
-                    print("Invalid input. Please enter valid data.")
+            session = (input("Enter student's session: "))
+            sem = (input("Enter student's semester: "))
+            DoB = input("Enter student's date of birth (YYYY-MM-DD): ")
+            Roll_num = (input("Enter student's roll number: "))
+            
 
             self.students.append(SMS(name, DEP, session, sem, DoB, Roll_num))
                 
@@ -32,7 +27,7 @@ class StudentManagementSystem:
     
     def Retreive(self):
         
-        roll_num = int(input("enter roll_num:"))
+        roll_num = (input("enter roll_num:"))
         for student in  self.students:    
             if student.Roll_num == roll_num:
                 print()
@@ -45,7 +40,7 @@ class StudentManagementSystem:
 
 
     def Update(self):
-            roll_num = int(input("Enter roll number to update: "))
+            roll_num = (input("Enter roll number to update: "))
             for student in self.students:
                 if student.Roll_num == roll_num:
                     print("Enter updated student details:")
@@ -56,7 +51,7 @@ class StudentManagementSystem:
                 
             print("Student not found.")
     def Delete(self):
-        roll_num = int(input("enter roll_num:"))
+        roll_num = (input("enter roll_num:"))
         for student in self.students:
             if student.Roll_num == roll_num:
                 self.students.remove(student)
