@@ -6,7 +6,7 @@ class StudentManagementSystem:
         
 
     def Create(self):
-        print("Enter student details:")
+        print("Enter student details > ")
             
         while True:
             name = input("Enter student's name: ")
