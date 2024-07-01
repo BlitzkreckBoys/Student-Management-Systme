@@ -39,6 +39,7 @@ class StudentManagementSystem:
                 student.display_student_info()
                 return
         print("Student not found.")
+        self.load_students()
 
     def update(self):
         roll_num = (input("Enter roll number to update: "))
@@ -55,14 +56,14 @@ class StudentManagementSystem:
 
     def delete(self):
         roll_num = (input("enter roll_num:"))
-        for student in self.students:
+        for student in self.load_students():
             if student.Roll_num == roll_num:
                 self.students.remove(student)
                 print("Student Deleted Successfully!")
             else:
                 print("Student not found.")
                 break
-        #self.load_student(st)
+        
     def save_student(self, st):
         f = open(r'/home/sam/Documents/PROJECT/student.csv', 'a')
         ro = csv.DictWriter(f, delimiter=',', fieldnames=["Name", "DEP","Session", "Semester", "DOB", "Roll_num"])
@@ -72,7 +73,7 @@ class StudentManagementSystem:
     def load_students(self):
         students = []
         try:
-            f = open(self.filename, mode='r', newline='', encoding='utf-8')
+            f = open(r'/home/sam/Documents/PROJECT/student.csv', mode='r', newline='', encoding='utf-8')
             reader = csv.DictReader(f)
             for row in reader:
                 students.append(SMS.from_dict(row))
