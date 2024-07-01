@@ -1,7 +1,9 @@
-from ClassSMS import SMS
 from MainSMS import StudentManagementSystem
 
-
 def main():
-    mange = StudentManagementSystem()
-    mange.choose_operation()
+    sms = StudentManagementSystem()
+    sms.choose_operation()
+
+if __name__ == "__main__":
+    main()
+
