@@ -33,7 +33,7 @@ class StudentManagementSystem:
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 name TEXT NOT NULL,
                 dep TEXT NOT NULL,
-                Session TEXT NOT NULL,
+                session TEXT NOT NULL,
                 semester INTEGER NOT NULL,
                 dob TEXT NOT NULL,
                 roll_num INTEGER NOT NULL

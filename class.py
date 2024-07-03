@@ -14,6 +14,6 @@ class SMS:
         print("Semester:", self.sem)
         print("Date of Birth:", self.dob)
         print("Roll Number:", self.roll_num)
-        print()
+        print("\n")
 
     

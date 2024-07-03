@@ -1,4 +1,4 @@
-from studentmanagementsystem import StudentManagementSystem
+from student_management_system import StudentManagementSystem
 
 def main():
     """Main function for student management"""
