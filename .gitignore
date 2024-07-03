@@ -1,5 +1,5 @@
 *.csv
-.venv
+.virt
 __pycache__
 # Ignore all .log files
 *.log
@@ -15,3 +15,4 @@ node_modules/
 
 # Ignore specific configuration files
 config.yaml
+
